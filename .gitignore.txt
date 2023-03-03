@@ -6,6 +6,6 @@ BOJ.vcxproj.user
 
 main.cpp
 
-x64/
-
 x64
+
+x64/

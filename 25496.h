@@ -1,10 +1,9 @@
-#pragma once
 #include <iostream>
 #include <algorithm>
 using namespace std;
 
 int P, N;
-int A[200];
+int A[1000];
 
 int main_25496() {
 	ios::sync_with_stdio(0);
