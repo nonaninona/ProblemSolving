@@ -1,11 +1,16 @@
-#pragma once
 #include <iostream>
-#include <algorithm>
+#include <queue>
 #define ll long long
 using namespace std;
 
+struct cmp {
+	bool operator()(int a, int b) {
+		return b < a;
+	}
+};
 int N;
-int A[100000];
+priority_queue<int, vector<int>, cmp> Q;
+
 
 
 int main_1715() {
@@ -13,23 +18,29 @@ int main_1715() {
 	cin.tie(0); cout.tie(0);
 
 	cin >> N;
-	for (int i = 0; i < N; i++)
-		cin >> A[i];
-
-	sort(A, A + N);
-
-	ll ret = 0;
-	ll currentDeck = 0;
-	if (N == 1)
-		ret = 0;
-	else {
-		ret = A[0] + A[1];
-		currentDeck = ret;
+	for (int i = 0; i < N; i++) {
+		int temp;
+		cin >> temp;
+		Q.push(temp);
 	}
 
-	for (int i = 2; i < N; i++) {
-		currentDeck += A[i];
-		ret += currentDeck;
+	ll ret = 0;
+	
+	if (N == 1) {
+		cout << 0 << endl;
+		return 0;
+	}
+
+	while (!Q.empty()) {
+		int first = Q.top();
+		Q.pop();
+		int second = Q.top();
+		Q.pop();
+		int sum = first + second;
+		ret += sum;
+		if (Q.empty())
+			break;
+		Q.push(sum);
 	}
 
 	cout << ret << endl;
