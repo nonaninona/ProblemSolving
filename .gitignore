@@ -1,11 +1,9 @@
-/BOJ.vcxproj
+BOJ.vcxproj
 
-/BOJ.vcxproj.filters
+BOJ.vcxproj.filters
 
-/BOJ.vcxproj.user
+BOJ.vcxproj.user
 
-/main.cpp
+main.cpp
 
-/x64/
-
-/x64
+x64/
