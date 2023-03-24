@@ -1,7 +1,7 @@
-BOJ.vcxproj
+.DS_Store
 
-BOJ.vcxproj.filters
+cmake-build-debug/
 
-BOJ.vcxproj.user
+CMakeLists.txt
 
-x64/
+.idea/

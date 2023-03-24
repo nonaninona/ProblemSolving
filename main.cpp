@@ -1,5 +1,6 @@
-#include "14244.h"
+#include <iostream>
 
 int main() {
-	main_14244();
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
 }
